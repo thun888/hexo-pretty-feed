@@ -33,14 +33,14 @@ if (!type || (typeof type !== 'string' && !Array.isArray(type))) {
 }
 
 if (Array.isArray(type)) {
-  type = [...new Set(type.filter(item => ['atom', 'rss2'].includes(item)))];
+  type = [...new Set(type.filter(item => ['atom', 'rss2', 'json'].includes(item)))];
   if (type.length === 0) {
     type = 'atom';
   }
 }
 
 if (typeof type === 'string') {
-  if (type !== 'atom' && type !== 'rss2') type = 'atom';
+  if (type !== 'atom' && type !== 'rss2' && type !== 'json') type = 'atom';
 }
 
 if (!path || typeof path !== typeof type) {
