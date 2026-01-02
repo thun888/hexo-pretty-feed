@@ -14,8 +14,7 @@ hexo.config.feed = Object.assign({
   pretty_rss2_file: '',
   pretty_atom_file: '',
   order_by: '-date',
-  autodiscovery: true,
-  template: ''
+  autodiscovery: true
 }, hexo.config.feed);
 
 const config = hexo.config.feed;
